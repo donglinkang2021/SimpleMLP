@@ -13,3 +13,9 @@
 > Inspired by [SimpleAttention](https://github.com/donglinkang2021/SimpleAttention).
 
 Just use simple MLP to regress or classify.
+
+## Dataset
+
+<div align="center">
+  <iframe src="https://donglinkang2021-simplemlp-app-bulwry.streamlit.app" width="800" height="600" frameborder="0"></iframe>
+</div>
