@@ -58,7 +58,7 @@ streamlit run app_results.py # for training results visualization, including `co
 > I evaluate the models based on the following metrics:
 
 $$
-\text{score} = 0.4 \times \text{train\_rank} + 0.3 \times \text{val\_rank} + 0.3 \times \text{test\_rank}
+\mathcal{score} = 0.4 \times \mathcal{train\_rank} + 0.3 \times \mathcal{val\_rank} + 0.3 \times \mathcal{test\_rank}
 $$
 
 The details can be found in the notebook `notebook\analyze.ipynb`.
