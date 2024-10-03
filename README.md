@@ -14,4 +14,23 @@
 
 Just use simple MLP to regress or classify.
 
-- dataset: I deploy a simple dataset visualization app on streamlit cloud, you can check it out [here](https://donglinkang2021-simplemlp-app-bulwry.streamlit.app)
+## Run it💨
+
+You can run the code with the following command:
+
+```bash
+python run.py --multirun dataset=regress_plane,regress_gaussian,classify_two_gauss,classify_spiral,classify_circle,classify_xor model=mlp_relu_1h,mlp_relu_2h,mlp_tanh_1h,mlp_tanh_2h,mlp_silu_1h,mlp_silu_2h,feat_attn_1h,feat_attn_2h,feat_attn_3h optimizer=adam,sgd
+```
+
+> On my machine(just a laptop with AMD Ryzen 7 5800H and 14GB RAM), it takes about 2 minutes to run all the settings under the combinations of 6 datasets, 9 models and 2 optimizers. (108 experiments in total)
+
+## Visualization📊
+
+I deploy two visualization apps on streamlit cloud, you can check it out here:
+
+Or you can run the apps locally:
+
+```bash
+streamlit run app_datasets.py # for datasets visualization, just 2D scatter plot
+streamlit run app_results.py # for training results visualization, including `config.yaml` and loss curve of 108 experiments
+```
