@@ -21,5 +21,6 @@ train:
   eval_interval: 10
   learning_rate: 0.03
   seed: 20241003
+  init_weights: false
 env:
   out_dir: ./result

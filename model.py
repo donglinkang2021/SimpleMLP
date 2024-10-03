@@ -3,6 +3,18 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
 
+__all__ = [
+    'MLP_Relu_1h',
+    'MLP_Relu_2h',
+    'MLP_Silu_1h',
+    'MLP_Silu_2h',
+    'MLP_Tanh_1h',
+    'MLP_Tanh_2h',
+    'Feat_Attn_1h',
+    'Feat_Attn_2h',
+    'Feat_Attn_3h'
+]
+
 class MLP_Relu_1h(nn.Module):
     """Linear regression model with one hidden layer"""
     def __init__(self, input_dim, n_hid, output_dim):

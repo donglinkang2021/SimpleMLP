@@ -47,6 +47,9 @@ def my_app(cfg: DictConfig) -> None:
 
     is_regress = is_regression(cfg.dataset)
     model = hydra.utils.instantiate(cfg.model, output_dim=1 if is_regress else 2)
+    if cfg.train.init_weights:
+        from utils import init_weights
+        init_weights(model)
     dataset = SimpleDataset(cfg.dataset)
     trainset, valset, testset = torch.utils.data.random_split(dataset, cfg.train.splits)
     def get_loader(dataset: Dataset) -> DataLoader:
