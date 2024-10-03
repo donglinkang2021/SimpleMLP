@@ -22,20 +22,20 @@ dataset_options = {
 }
 
 model_options = {
-    "Feature Attention 1 Hidden Layer": "feat_attn_1h",
-    "Feature Attention 2 Hidden Layer": "feat_attn_2h",
-    "Feature Attention 3 Hidden Layer": "feat_attn_3h",
-    "MLP with 1 Hidden Layer, use tanh": "mlp_tanh_1h",
-    "MLP with 2 Hidden Layer, use tanh": "mlp_tanh_2h",
-    "MLP with 1 Hidden Layer, use ReLU": "mlp_relu_1h",
-    "MLP with 2 Hidden Layer, use ReLU": "mlp_relu_2h",
-    "MLP with 1 Hidden Layer, use SiLU": "mlp_silu_1h",
-    "MLP with 2 Hidden Layer, use SiLU": "mlp_silu_2h"
+    "Feature Attention 1 Hidden Layer": "Feat_Attn_1h",
+    "Feature Attention 2 Hidden Layer": "Feat_Attn_2h",
+    "Feature Attention 3 Hidden Layer": "Feat_Attn_3h",
+    "MLP with 1 Hidden Layer, use tanh": "MLP_Tanh_1h",
+    "MLP with 2 Hidden Layer, use tanh": "MLP_Tanh_2h",
+    "MLP with 1 Hidden Layer, use ReLU": "MLP_Relu_1h",
+    "MLP with 2 Hidden Layer, use ReLU": "MLP_Relu_2h",
+    "MLP with 1 Hidden Layer, use SiLU": "MLP_Silu_1h",
+    "MLP with 2 Hidden Layer, use SiLU": "MLP_Silu_2h"
 }
 
 optimizer_options = {
-    "Adam": "adam",
-    "SGD": "sgd"
+    "Adam": "Adam",
+    "SGD": "SGD"
 }
 
 dataset_name = st.sidebar.selectbox("Select Dataset", list(dataset_options.keys()))
