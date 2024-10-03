@@ -10,10 +10,10 @@ st.set_page_config(page_title="Dataset Visualization Tool", page_icon="🔍")
 dataset_options = {
     "Regression Plane": dataset.regress_plane,
     "Regression Gaussian": dataset.regress_gaussian,
-    "Two Gaussian Classification": dataset.classify_two_gauss_data,
-    "Spiral Classification": dataset.classify_spiral_data,
-    "Circle Classification": dataset.classify_circle_data,
-    "XOR Classification": dataset.classify_xor_data
+    "Two Gaussian Classification": dataset.classify_two_gauss,
+    "Spiral Classification": dataset.classify_spiral,
+    "Circle Classification": dataset.classify_circle,
+    "XOR Classification": dataset.classify_xor
 }
 
 dataset_name = st.sidebar.selectbox("Select Dataset", list(dataset_options.keys()))

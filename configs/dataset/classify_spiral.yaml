@@ -1,0 +1,4 @@
+_target_: dataset.classify_spiral
+num_samples: 500
+noise: 0.01
+radius: 6

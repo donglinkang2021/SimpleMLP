@@ -1,0 +1,134 @@
+[
+    {
+        "train": 0.7214253970554897,
+        "val": 0.6876692175865173,
+        "test": 0.7140812873840332,
+        "step": 0
+    },
+    {
+        "train": 0.572754510811397,
+        "val": 0.5612329840660095,
+        "test": 0.613649845123291,
+        "step": 10
+    },
+    {
+        "train": 0.26842712078775677,
+        "val": 0.296845018863678,
+        "test": 0.2945643365383148,
+        "step": 20
+    },
+    {
+        "train": 0.8860646826880318,
+        "val": 0.6465393900871277,
+        "test": 1.0175466537475586,
+        "step": 30
+    },
+    {
+        "train": 1.1789511271885462,
+        "val": 1.1695150136947632,
+        "test": 0.9605197310447693,
+        "step": 40
+    },
+    {
+        "train": 1.08831764119012,
+        "val": 0.7120938897132874,
+        "test": 0.7261253595352173,
+        "step": 50
+    },
+    {
+        "train": 5.41712829044887,
+        "val": 4.259087085723877,
+        "test": 6.976952075958252,
+        "step": 60
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 70
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 80
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 90
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 100
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 110
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 120
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 130
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 140
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 150
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 160
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 170
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 180
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 190
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 200
+    },
+    {
+        "train": NaN,
+        "val": NaN,
+        "test": NaN,
+        "step": 209
+    }
+]

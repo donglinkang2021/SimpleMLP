@@ -1,0 +1,5 @@
+_target_: dataset.classify_xor
+num_samples: 500
+noise: 0.2
+radius: 6
+padding: 0.3

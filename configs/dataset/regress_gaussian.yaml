@@ -1,0 +1,4 @@
+_target_: dataset.regress_gaussian
+num_samples: 500
+noise: 0.2
+radius: 6

@@ -1,0 +1,6 @@
+defaults:
+  - dataset: regress_plane
+  - model: mlp_tanh_1h
+  - optimizer: adam
+  - train: default
+  - env: default

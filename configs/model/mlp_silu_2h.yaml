@@ -1,0 +1,4 @@
+_target_: model.MLP_Silu_2h
+input_dim: 2
+n_hid: 16
+output_dim: 1

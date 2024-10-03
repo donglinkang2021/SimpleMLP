@@ -1,6 +1,15 @@
 import numpy as np
 from typing import Tuple
 
+__all__ = [
+    "regress_plane",
+    "regress_gaussian",
+    "classify_two_gauss",
+    "classify_spiral",
+    "classify_circle",
+    "classify_xor"
+]
+
 def regress_plane(
         num_samples:int, 
         noise:float, 
@@ -59,7 +68,7 @@ def regress_gaussian(
 
     return x, y, label
 
-def classify_two_gauss_data(
+def classify_two_gauss(
         num_samples:int, 
         noise:float, 
         radius:int = 6
@@ -85,7 +94,7 @@ def classify_two_gauss_data(
 
     return x, y, label
 
-def classify_spiral_data(
+def classify_spiral(
         num_samples:int, 
         noise:float, 
         radius:int = 6
@@ -111,7 +120,7 @@ def classify_spiral_data(
 
     return x, y, label
 
-def classify_circle_data(
+def classify_circle(
         num_samples:int, 
         noise:float, 
         radius:int = 6
@@ -141,7 +150,7 @@ def classify_circle_data(
 
     return x, y, label
 
-def classify_xor_data(
+def classify_xor(
         num_samples:int, 
         noise:float, 
         radius:int = 6,

@@ -14,8 +14,4 @@
 
 Just use simple MLP to regress or classify.
 
-## Dataset
-
-<div align="center">
-  <iframe src="https://donglinkang2021-simplemlp-app-bulwry.streamlit.app" width="800" height="600" frameborder="0"></iframe>
-</div>
+- dataset: I deploy a simple dataset visualization app on streamlit cloud, you can check it out [here](https://donglinkang2021-simplemlp-app-bulwry.streamlit.app)

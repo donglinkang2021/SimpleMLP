@@ -1,0 +1,24 @@
+dataset:
+  _target_: dataset.regress_plane
+  num_samples: 500
+  noise: 0.2
+  radius: 6
+model:
+  _target_: model.MLP_Silu_2h
+  input_dim: 2
+  n_hid: 16
+  output_dim: 1
+optimizer:
+  _target_: torch.optim.Adam
+train:
+  splits:
+  - 0.8
+  - 0.1
+  - 0.1
+  batch_size: 64
+  num_epochs: 30
+  eval_interval: 10
+  learning_rate: 0.03
+  seed: 20241003
+env:
+  out_dir: ./result
