@@ -5,6 +5,7 @@ import torch.utils
 from torch.utils.data import Dataset, DataLoader
 import torch.utils.data
 from tqdm import tqdm
+from pathlib import Path
 
 def is_regression(dataset_cfg: DictConfig) -> bool:
     return dataset_cfg["_target_"].split(".")[-1].startswith("regress_")
@@ -38,8 +39,6 @@ class SimpleDataset(Dataset):
 def my_app(cfg: DictConfig) -> None:
     # print(OmegaConf.to_yaml(cfg))
     # return
-    import json
-    from pathlib import Path
     res_dir = get_result_dir(cfg)
     Path(res_dir).mkdir(parents=True, exist_ok=True)
     with open(f"{res_dir}/config.yaml", "w") as f:
@@ -89,14 +88,7 @@ def my_app(cfg: DictConfig) -> None:
             loss.backward()
             optimizer.step()
             pbar.update(1)
-    pbar.close()
-    with open(f"{res_dir}/metrics.json", "w") as f:
-        json.dump(metrics, f, indent=4)
-    
+    pbar.close()    
 
 if __name__ == "__main__":
     my_app()
-
-"""
-python run.py --multirun dataset=regress_plane,regress_gaussian,classify_two_gauss,classify_spiral,classify_circle,classify_xor model=mlp_relu_1h,mlp_relu_2h,mlp_tanh_1h,mlp_tanh_2h,mlp_silu_1h,mlp_silu_2h,feat_attn_1h,feat_attn_2h,feat_attn_3h optimizer=adam,sgd
-"""
