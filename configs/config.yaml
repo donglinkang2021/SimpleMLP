@@ -1,6 +1,9 @@
 defaults:
   - dataset: regress_plane
   - model: mlp_tanh_1h
-  - optimizer: adam
+  - optimizer: adamw
   - train: default
   - env: default
+  - logger: swanlab
+  - hydra: default
+  - _self_

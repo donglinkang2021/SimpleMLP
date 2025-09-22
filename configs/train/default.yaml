@@ -1,7 +1,7 @@
 splits: [0.8, 0.1, 0.1]
-batch_size: 64
-num_epochs: 30
 eval_interval: 10
-learning_rate: 0.03
-seed: 20241003
-init_weights: False
+max_steps: 1000
+batch_size: 64
+learning_rate: 1e-3
+seed: 1337
+init_weights: false
