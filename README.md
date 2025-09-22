@@ -18,42 +18,29 @@ Just use simple MLP to regress or classify.
 
 ## Run it💨
 
+For the environment setup, we recommend using `uv` (super fast):
+
+```bash
+uv sync
+```
+
 You can run the code with the following command:
 
 ```bash
-python run.py --multirun dataset=regress_plane,regress_gaussian,classify_two_gauss,classify_spiral,classify_circle,classify_xor model=mlp_relu_1h,mlp_relu_2h,mlp_tanh_1h,mlp_tanh_2h,mlp_silu_1h,mlp_silu_2h,feat_attn_1h,feat_attn_2h,feat_attn_3h optimizer=adam,sgd
+bash run.sh
 ```
 
-> On my machine(just a laptop with AMD Ryzen 7 5800H and 14GB RAM), it takes about 2 minutes to run all the settings under the combinations of 6 datasets, 9 models and 2 optimizers. (108 experiments in total)
+## Data Visualization📊
 
-And the running output will be like this:
-
-```bash
-[2024-10-03 18:00:37,858][HYDRA] Launching 108 jobs locally
-[2024-10-03 18:00:37,858][HYDRA]        #0 : dataset=regress_plane model=mlp_relu_1h optimizer=adam
-Training: 100%|██████████████████| 210/210 [00:00<00:00, 507.65it/s, train=0.00677, val=0.00826, test=0.00795, step=209]
-[2024-10-03 18:00:39,476][HYDRA]        #1 : dataset=regress_plane model=mlp_relu_1h optimizer=sgd
-Training: 100%|██████████████████| 210/210 [00:00<00:00, 683.84it/s, train=0.00618, val=0.00827, test=0.00712, step=209]
-...
-[2024-10-03 18:01:37,243][HYDRA]        #107 : dataset=classify_xor model=feat_attn_3h optimizer=sgd
-Training: 100%|██████████████████| 210/210 [00:00<00:00, 429.76it/s, train=0.693, val=0.693, test=0.694, step=209]
-```
-
-## Visualization📊
-
-I deploy two visualization apps on streamlit cloud, you can check it out here:
-
-- [Datasets Visualization](https://donglinkang2021-simplemlp-app-datasets-t3w3g8.streamlit.app/)
-- [Results Visualization](https://donglinkang2021-simplemlp-app-results-5v1xze.streamlit.app/)
+I deploy a dataset visualization app on streamlit cloud, you can check it out here ➡ [Datasets Visualization](https://donglinkang2021-simplemlp-app-datasets-t3w3g8.streamlit.app/)
 
 Or you can run the apps locally:
 
 ```bash
 streamlit run app_datasets.py # for datasets visualization, just 2D scatter plot
-streamlit run app_results.py # for training results visualization, including `config.yaml` and loss curve of 108 experiments
 ```
 
-## Appendix📚
+## Evaluation🧪
 
 > I evaluate the models based on the following metrics:
 
