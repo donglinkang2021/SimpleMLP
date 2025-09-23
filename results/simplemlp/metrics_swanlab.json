@@ -1,0 +1,434 @@
+[
+  {
+    "model": "Feat_Attn_3h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.1097244620323181,
+    "eval/train_loss": 0.1291773010577474,
+    "eval/val_loss": 0.2208159118890762,
+    "train/loss": 0.1604271531105042
+  },
+  {
+    "model": "Feat_Attn_2h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.2348369956016541,
+    "eval/train_loss": 0.09301981143653393,
+    "eval/val_loss": 0.1206962391734123,
+    "train/loss": 0.03425278887152672
+  },
+  {
+    "model": "Feat_Attn_1h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.09868893772363663,
+    "eval/train_loss": 0.1142496871096747,
+    "eval/val_loss": 0.1534901112318039,
+    "train/loss": 0.08681142330169678
+  },
+  {
+    "model": "MLP_Silu_2h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.08501822501420975,
+    "eval/train_loss": 0.131770698087556,
+    "eval/val_loss": 0.1500354260206223,
+    "train/loss": 0.2173831015825272
+  },
+  {
+    "model": "MLP_Silu_1h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.09697513282299042,
+    "eval/train_loss": 0.1086197109626872,
+    "eval/val_loss": 0.08700932562351227,
+    "train/loss": 0.1255887597799301
+  },
+  {
+    "model": "MLP_Tanh_2h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.2868938148021698,
+    "eval/train_loss": 0.1380952703101294,
+    "eval/val_loss": 0.1208957210183144,
+    "train/loss": 0.1634215116500854
+  },
+  {
+    "model": "MLP_Tanh_1h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.2198354601860046,
+    "eval/train_loss": 0.1929143071174622,
+    "eval/val_loss": 0.1526492089033127,
+    "train/loss": 0.1967301517724991
+  },
+  {
+    "model": "MLP_Relu_2h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.1388564556837082,
+    "eval/train_loss": 0.09498745522328786,
+    "eval/val_loss": 0.16597980260849,
+    "train/loss": 0.165026381611824
+  },
+  {
+    "model": "MLP_Relu_1h",
+    "dataset": "classify_xor",
+    "eval/test_loss": 0.184648871421814,
+    "eval/train_loss": 0.1497909703424999,
+    "eval/val_loss": 0.3302277028560638,
+    "train/loss": 0.1529597342014313
+  },
+  {
+    "model": "Feat_Attn_3h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.1247116476297379,
+    "eval/train_loss": 0.1159449336784227,
+    "eval/val_loss": 0.1097592040896416,
+    "train/loss": 0.2149672657251358
+  },
+  {
+    "model": "Feat_Attn_2h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.1045158952474594,
+    "eval/train_loss": 0.1003080265862601,
+    "eval/val_loss": 0.1718084216117859,
+    "train/loss": 0.07445987313985825
+  },
+  {
+    "model": "Feat_Attn_1h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.1388575434684753,
+    "eval/train_loss": 0.149651360298906,
+    "eval/val_loss": 0.1735206097364426,
+    "train/loss": 0.1298637837171555
+  },
+  {
+    "model": "MLP_Silu_2h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.09928999841213226,
+    "eval/train_loss": 0.1100978694323983,
+    "eval/val_loss": 0.08209774643182755,
+    "train/loss": 0.1045954823493958
+  },
+  {
+    "model": "MLP_Silu_1h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.07363349944353104,
+    "eval/train_loss": 0.1273107039076941,
+    "eval/val_loss": 0.09387341141700745,
+    "train/loss": 0.164086788892746
+  },
+  {
+    "model": "MLP_Tanh_2h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.1225780174136162,
+    "eval/train_loss": 0.1080697721668652,
+    "eval/val_loss": 0.1228448301553726,
+    "train/loss": 0.204668715596199
+  },
+  {
+    "model": "MLP_Tanh_1h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.2252116799354553,
+    "eval/train_loss": 0.2544658333063126,
+    "eval/val_loss": 0.1979340016841888,
+    "train/loss": 0.2349763512611389
+  },
+  {
+    "model": "MLP_Relu_2h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.09899735450744629,
+    "eval/train_loss": 0.1039749910788877,
+    "eval/val_loss": 0.09544896334409714,
+    "train/loss": 0.03859976306557655
+  },
+  {
+    "model": "MLP_Relu_1h",
+    "dataset": "classify_circle",
+    "eval/test_loss": 0.1459064930677414,
+    "eval/train_loss": 0.08911253458687238,
+    "eval/val_loss": 0.1448649913072586,
+    "train/loss": 0.06794603168964386
+  },
+  {
+    "model": "Feat_Attn_3h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.6080735921859741,
+    "eval/train_loss": 0.5933270795004708,
+    "eval/val_loss": 0.6206508874893188,
+    "train/loss": 0.5913926959037781
+  },
+  {
+    "model": "Feat_Attn_2h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.1149987801909447,
+    "eval/train_loss": 0.1092357262969017,
+    "eval/val_loss": 0.1564780473709106,
+    "train/loss": 0.154821440577507
+  },
+  {
+    "model": "Feat_Attn_1h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.6418168544769287,
+    "eval/train_loss": 0.5697346414838519,
+    "eval/val_loss": 0.5793671011924744,
+    "train/loss": 0.5591058731079102
+  },
+  {
+    "model": "MLP_Silu_2h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.6343055367469788,
+    "eval/train_loss": 0.6311689019203186,
+    "eval/val_loss": 0.6231523752212524,
+    "train/loss": 0.5836442112922668
+  },
+  {
+    "model": "MLP_Silu_1h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.6538271307945251,
+    "eval/train_loss": 0.6585226569856916,
+    "eval/val_loss": 0.7107751965522766,
+    "train/loss": 0.6811317801475525
+  },
+  {
+    "model": "MLP_Tanh_2h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.5957009196281433,
+    "eval/train_loss": 0.6187689559800285,
+    "eval/val_loss": 0.6897907853126526,
+    "train/loss": 0.6223453879356384
+  },
+  {
+    "model": "MLP_Tanh_1h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.6717976331710815,
+    "eval/train_loss": 0.639830367905753,
+    "eval/val_loss": 0.6881056427955627,
+    "train/loss": 0.6349160075187683
+  },
+  {
+    "model": "MLP_Relu_2h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.5026540160179138,
+    "eval/train_loss": 0.4916296005249023,
+    "eval/val_loss": 0.4635732769966125,
+    "train/loss": 0.5469123721122742
+  },
+  {
+    "model": "MLP_Relu_1h",
+    "dataset": "classify_spiral",
+    "eval/test_loss": 0.6462358832359314,
+    "eval/train_loss": 0.663643615586417,
+    "eval/val_loss": 0.6794509291648865,
+    "train/loss": 0.6429368257522583
+  },
+  {
+    "model": "Feat_Attn_3h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.01169180031865835,
+    "eval/train_loss": 0.07147345239562648,
+    "eval/val_loss": 0.01612753979861736,
+    "train/loss": 0.07174933701753616
+  },
+  {
+    "model": "Feat_Attn_2h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.01391548756510019,
+    "eval/train_loss": 0.02821744619203465,
+    "eval/val_loss": 0.04266940429806709,
+    "train/loss": 0.03622720018029213
+  },
+  {
+    "model": "Feat_Attn_1h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.0191720612347126,
+    "eval/train_loss": 0.03453127407867994,
+    "eval/val_loss": 0.03202341496944427,
+    "train/loss": 0.0202639065682888
+  },
+  {
+    "model": "MLP_Silu_2h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.02485114522278309,
+    "eval/train_loss": 0.04692638186471803,
+    "eval/val_loss": 0.01795891113579273,
+    "train/loss": 0.07828765362501144
+  },
+  {
+    "model": "MLP_Silu_1h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.06952168047428131,
+    "eval/train_loss": 0.04107278279427971,
+    "eval/val_loss": 0.03010382503271103,
+    "train/loss": 0.01549864001572132
+  },
+  {
+    "model": "MLP_Tanh_2h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.05519428849220276,
+    "eval/train_loss": 0.03993063646235636,
+    "eval/val_loss": 0.01591908745467663,
+    "train/loss": 0.06482494622468948
+  },
+  {
+    "model": "MLP_Tanh_1h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.03844781965017319,
+    "eval/train_loss": 0.0368695135361382,
+    "eval/val_loss": 0.008731039240956306,
+    "train/loss": 0.04796862974762917
+  },
+  {
+    "model": "MLP_Relu_2h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.0178994107991457,
+    "eval/train_loss": 0.03291550278663635,
+    "eval/val_loss": 0.01721989922225475,
+    "train/loss": 0.004341771826148033
+  },
+  {
+    "model": "MLP_Relu_1h",
+    "dataset": "classify_two_gauss",
+    "eval/test_loss": 0.01025622338056564,
+    "eval/train_loss": 0.02937851327338389,
+    "eval/val_loss": 0.0314779244363308,
+    "train/loss": 0.01796975173056126
+  },
+  {
+    "model": "Feat_Attn_3h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.2471347600221634,
+    "eval/train_loss": 0.2350037864276341,
+    "eval/val_loss": 0.1983536332845688,
+    "train/loss": 0.1911302953958511
+  },
+  {
+    "model": "Feat_Attn_2h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.1926273554563522,
+    "eval/train_loss": 0.1922083241598947,
+    "eval/val_loss": 0.2334946393966675,
+    "train/loss": 0.1349221765995026
+  },
+  {
+    "model": "Feat_Attn_1h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.2561735808849335,
+    "eval/train_loss": 0.2653773256710598,
+    "eval/val_loss": 0.3245048224925995,
+    "train/loss": 0.2143449038267136
+  },
+  {
+    "model": "MLP_Silu_2h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.2049070000648499,
+    "eval/train_loss": 0.2066680341959,
+    "eval/val_loss": 0.2215262949466705,
+    "train/loss": 0.2529979944229126
+  },
+  {
+    "model": "MLP_Silu_1h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.3409658670425415,
+    "eval/train_loss": 0.2979352793523243,
+    "eval/val_loss": 0.3594699800014496,
+    "train/loss": 0.262441486120224
+  },
+  {
+    "model": "MLP_Tanh_2h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.1921490728855133,
+    "eval/train_loss": 0.1959886380604335,
+    "eval/val_loss": 0.2484726309776306,
+    "train/loss": 0.294129341840744
+  },
+  {
+    "model": "MLP_Tanh_1h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.2324597239494324,
+    "eval/train_loss": 0.2609803208283016,
+    "eval/val_loss": 0.2794899642467499,
+    "train/loss": 0.2152130305767059
+  },
+  {
+    "model": "MLP_Relu_2h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.2900500893592834,
+    "eval/train_loss": 0.2423925570079259,
+    "eval/val_loss": 0.3312731683254242,
+    "train/loss": 0.1923449635505676
+  },
+  {
+    "model": "MLP_Relu_1h",
+    "dataset": "regress_gaussian",
+    "eval/test_loss": 0.2473904490470886,
+    "eval/train_loss": 0.3127382035766329,
+    "eval/val_loss": 0.323274165391922,
+    "train/loss": 0.3037559390068054
+  },
+  {
+    "model": "Feat_Attn_3h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.005853581242263317,
+    "eval/train_loss": 0.006863001867064408,
+    "eval/val_loss": 0.005694619379937649,
+    "train/loss": 0.007384042255580425
+  },
+  {
+    "model": "Feat_Attn_2h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.006749031599611044,
+    "eval/train_loss": 0.00623614587155836,
+    "eval/val_loss": 0.008672129362821579,
+    "train/loss": 0.007528518326580524
+  },
+  {
+    "model": "Feat_Attn_1h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.006469682324677706,
+    "eval/train_loss": 0.006106815300881863,
+    "eval/val_loss": 0.00644703907892108,
+    "train/loss": 0.004476208705455065
+  },
+  {
+    "model": "MLP_Silu_2h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.007375980727374554,
+    "eval/train_loss": 0.007010424043983221,
+    "eval/val_loss": 0.004890255630016327,
+    "train/loss": 0.006980666425079107
+  },
+  {
+    "model": "MLP_Silu_1h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.006220993585884571,
+    "eval/train_loss": 0.007004757278731891,
+    "eval/val_loss": 0.007245809305459261,
+    "train/loss": 0.007882310077548027
+  },
+  {
+    "model": "MLP_Tanh_2h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.008059399202466011,
+    "eval/train_loss": 0.006713750938485775,
+    "eval/val_loss": 0.007190703880041838,
+    "train/loss": 0.007264374755322933
+  },
+  {
+    "model": "MLP_Tanh_1h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.006926045287400484,
+    "eval/train_loss": 0.007393453669335161,
+    "eval/val_loss": 0.00515856733545661,
+    "train/loss": 0.006804316304624081
+  },
+  {
+    "model": "MLP_Relu_2h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.007473452482372522,
+    "eval/train_loss": 0.005940764809825591,
+    "eval/val_loss": 0.008547395467758179,
+    "train/loss": 0.007604065351188183
+  },
+  {
+    "model": "MLP_Relu_1h",
+    "dataset": "regress_plane",
+    "eval/test_loss": 0.007928179576992989,
+    "eval/train_loss": 0.007038204531584468,
+    "eval/val_loss": 0.005228709429502487,
+    "train/loss": 0.006371821742504835
+  }
+]

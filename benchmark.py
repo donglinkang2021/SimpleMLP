@@ -1,35 +1,12 @@
-from swanlab import OpenApi
+import wandb
+import swanlab
 from tqdm import tqdm
 from tabulate import tabulate
 import pandas as pd
 from pathlib import Path
 import json
-import re
 
-# class Experiment(BaseModel):
-#     cuid: str               # 实验CUID, 唯一标识符
-#     name: str               # 实验名
-#     description: str = ""   # 实验描述
-#     state: str              # 实验状态, 'FINISHED' 或 'RUNNING'
-#     show: bool              # 显示状态
-#     createdAt: str          # e.g., '2024-11-23T12:28:04.286Z'
-#     finishedAt: str = ""    # e.g., '2024-11-23T12:28:04.286Z'
-#     user: Dict[str, str]    # 实验创建者, 包含 'username' 与 'name'
-#     profile: Dict           # 实验相关配置
-
-
-# class Project(BaseModel):
-#     cuid: str                   # 项目CUID, 唯一标识符
-#     name: str                   # 项目名
-#     description: str = ""       # 项目描述
-#     visibility: str             # 可见性, 'PUBLIC' 或 'PRIVATE'
-#     createdAt: str              # e.g., '2024-11-23T12:28:04.286Z'
-#     updatedAt: str              # e.g., '2024-11-23T12:28:04.286Z'
-#     group: Dict[str, str]       # 工作空间信息, 包含 'type', 'username', 'name'
-#     count: Dict[str, int] = {}  # 项目的统计信息
-
-
-def get_project_exps(proj_name:str, api:OpenApi):
+def get_project_exps_swanlab(proj_name:str, api:swanlab.OpenApi):
     """use api to get all the data"""
     data = []
     exps = api.list_experiments(project=proj_name).data
@@ -45,6 +22,21 @@ def get_project_exps(proj_name:str, api:OpenApi):
         })
     return data
 
+def get_project_exps_wandb(path:str, api:wandb.Api):
+    """use api to get all the data"""
+    data = []
+    runs = api.runs(path)
+    print(f"  {len(runs)} experiments")
+    for run in tqdm(runs, desc="Fetching runeriments summaries", dynamic_ncols=True):
+        data.append({
+            "id": run.id, 
+            "name": run.name, 
+            "state": run.state,
+            "config": run.config, 
+            "summary": run.summary
+        })
+    return data
+
 def analyze_metrics(metrics: list):
     """
     Analyzes metrics and prints a separate academic-style table for each panel.
@@ -56,11 +48,11 @@ def analyze_metrics(metrics: list):
 
     df = pd.DataFrame(metrics)
     
-    # Find all unique metric panels by looking for the '/min' suffix
-    metric_panels = {re.sub(r'/min$', '', col) for col in df.columns if col.endswith('/min')}
+    # Find all unique metric panels by looking for the 'loss' suffix
+    metric_panels = {col for col in df.columns if col.endswith('loss')}
 
     for panel in sorted(list(metric_panels)):
-        metric_col = f"{panel}/min"
+        metric_col = panel
         
         # Pivot the DataFrame to get models as rows and datasets as columns
         pivot_df = df.pivot(index='model', columns='dataset', values=metric_col)
@@ -94,9 +86,9 @@ def rank_and_score_models(metrics: list):
 
     # Rename columns for easier access and clarity
     df.rename(columns={
-        'eval/train_loss/min': 'train_loss',
-        'eval/val_loss/min': 'val_loss',
-        'eval/test_loss/min': 'test_loss'
+        'eval/train_loss': 'train_loss',
+        'eval/val_loss': 'val_loss',
+        'eval/test_loss': 'test_loss'
     }, inplace=True)
 
     # Ensure all required loss columns are present
@@ -148,31 +140,57 @@ def rank_and_score_models(metrics: list):
     print("\n--- Overall Model Ranking ---")
     print(tabulate(score_df, headers="keys", tablefmt="github", floatfmt=".2f"))
 
-def main():
+def analyze_wandb():
+    entity_name = "donglinkang2021-beijing-institute-of-technology"
     proj_name = "simplemlp"
     Path(f"results/{proj_name}").mkdir(exist_ok=True, parents=True)
+    result_file = f"results/{proj_name}/metrics_wandb.json"
     
-    if not Path(f"results/{proj_name}/metrics.json").exists():
-        my_api = OpenApi()
-        data = get_project_exps(proj_name, my_api)
+    if not Path(result_file).exists():
+        data = get_project_exps_wandb(f"{entity_name}/{proj_name}", wandb.Api())
         metrics = [
             {
-                "model": exp["profile"]["config"]["model"]["value"]["_target_"].split(".")[-1],
-                "dataset": exp["profile"]["config"]["dataset"]["value"]["_target_"].split(".")[-1],
-                **{f"{pannel_name}/min": summary["min"]["value"] for pannel_name, summary in exp["summary"].items()}
+                "model": exp["config"]["model"]["_target_"].split(".")[-1],
+                "dataset": exp["config"]["dataset"]["_target_"].split(".")[-1],
+                **{k: v for k, v in exp["summary"].items() if k.endswith("loss")}
             }
-            for exp in data if exp["state"] == "FINISHED"
+            for exp in data if exp["state"] == "finished"
         ]
-        with open(f"results/{proj_name}/metrics.json", "w") as f:
+        with open(result_file, "w") as f:
             json.dump(metrics, f, indent=2)
     else:
-        with open(f"results/{proj_name}/metrics.json", "r") as f:
+        with open(result_file, "r") as f:
             metrics = json.load(f)
     
     analyze_metrics(metrics)
     rank_and_score_models(metrics)
+
+def analyze_swanlab():
+    proj_name = "simplemlp"
+    Path(f"results/{proj_name}").mkdir(exist_ok=True, parents=True)
+    result_file = f"results/{proj_name}/metrics_swanlab.json"
     
+    if not Path(result_file).exists():
+        data = get_project_exps_swanlab(proj_name, swanlab.OpenApi())
+        metrics = [
+            {
+                "model": exp["profile"]["config"]["model"]["value"]["_target_"].split(".")[-1],
+                "dataset": exp["profile"]["config"]["dataset"]["value"]["_target_"].split(".")[-1],
+                **{pannel_name: summary["value"] for pannel_name, summary in exp["summary"].items()}
+            }
+            for exp in data if exp["state"] == "FINISHED"
+        ]
+        with open(result_file, "w") as f:
+            json.dump(metrics, f, indent=2)
+    else:
+        with open(result_file, "r") as f:
+            metrics = json.load(f)
+    
+    analyze_metrics(metrics)
+    rank_and_score_models(metrics)
+
 if __name__ == "__main__":
-    main()
+    analyze_swanlab()
+    analyze_wandb()
 
 # python benchmark.py
