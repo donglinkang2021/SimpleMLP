@@ -3,7 +3,7 @@ from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm, trange
 
 import hydra
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
 from hydra_utils import register_omegaconf_resolvers
 register_omegaconf_resolvers()
 
