@@ -1,5 +1,3 @@
-<div align="center">
-
 # Simple MLP
 
 > Inspired by [SimpleAttention](https://github.com/donglinkang2021/SimpleAttention).
